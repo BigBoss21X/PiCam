@@ -1,8 +1,11 @@
 import cv2
+import cv
 
 class VideoCamera(object):
     def __init__(self):
         self.video = cv2.VideoCapture(0) # 0 stands for camera #0
+        self.video.set(cv.CV_CAP_PROP_FRAME_WIDTH, 640);
+        self.video.set(cv.CV_CAP_PROP_FRAME_HEIGHT, 480);
         # self.video = cv2.VideoCapture('video.mp4')
     
     def __del__(self):

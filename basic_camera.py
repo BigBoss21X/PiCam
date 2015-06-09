@@ -1,9 +1,12 @@
 import numpy as np
 import cv2
+import cv
 
 window_name = "Video #0"
 
 cap = cv2.VideoCapture(0)
+cap.set(cv.CV_CAP_PROP_FRAME_WIDTH, 640);
+cap.set(cv.CV_CAP_PROP_FRAME_HEIGHT, 480);
 cv2.namedWindow(window_name, cv2.CV_WINDOW_AUTOSIZE)
 
 while(True):
